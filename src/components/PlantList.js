@@ -1,9 +1,11 @@
 import React from "react";
 import PlantCard from "./PlantCard";
 
-function PlantList() {
+function PlantList({plantInfo,handleDelete,handleEdit, handleToggleStock}) {
   return (
-    <ul className="cards">{/* render PlantCards components in here */}</ul>
+    <ul className="cards">
+      <PlantCard plantInfo={plantInfo} handleDelete={handleDelete} handleEdit={handleEdit} handleToggleStock={handleToggleStock}/>
+    </ul>
   );
 }
 
